@@ -1,0 +1,1 @@
+@W: MT530 :"c:\users\sebastian\digitalesysteme\fpga\src\hex4x7seg.vhd":31:8:31:9|Found inferred clock aufgabe1|clk which controls 17 sequential elements including u1.freq_cnt[0:13]. This clock has no specified timing constraint which may adversely impact design performance. 

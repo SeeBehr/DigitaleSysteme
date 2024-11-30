@@ -1,7 +1,0 @@
-C:\Users\Sebastian\Microchip\Libero\SynplifyPro\bin64\syn_nfilter.exe  -link  -top  work.aufgabe1  -multisrs  C:\Users\Sebastian\DigitaleSysteme\FPGA\Aufgabe1\synthesis\synwork\aufgabe1_comp.srs  -osyn  C:\Users\Sebastian\DigitaleSysteme\FPGA\Aufgabe1\synthesis\synwork\aufgabe1_mult.srs  -log  C:\Users\Sebastian\DigitaleSysteme\FPGA\Aufgabe1\synthesis\synlog\aufgabe1_multi_srs_gen.srr 
-relcom:..\..\..\..\..\Microchip\Libero\SynplifyPro\bin64\syn_nfilter.exe -link -top work.aufgabe1 -multisrs ..\synwork\aufgabe1_comp.srs -osyn ..\synwork\aufgabe1_mult.srs -log ..\synlog\aufgabe1_multi_srs_gen.srr
-rc:0 success:1 runtime:1
-file:..\synwork\aufgabe1_comp.srs|io:i|time:1732704150|size:3828|exec:0|csum:88C3C63B30D3BD2FB78E9286758E3FDA
-file:..\synwork\aufgabe1_mult.srs|io:o|time:1732704152|size:2121|exec:0|csum:
-file:..\synlog\aufgabe1_multi_srs_gen.srr|io:o|time:1732704152|size:1065|exec:0|csum:
-file:..\..\..\..\..\microchip\libero\synplifypro\bin64\syn_nfilter.exe|io:i|time:1704385664|size:10549248|exec:1|csum:0A08FED8FB1594556EFD70D403F152B0

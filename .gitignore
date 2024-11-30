@@ -1,0 +1,26 @@
+#Microsemi Libero SOC v11.5
+
+#ignore miscellaneous files in the following directories
+Aufgabe*/simulation/*
+Aufgabe*/package/*
+Aufgabe*/component/*
+Aufgabe*/tooldata/*
+Aufgabe*/viewdraw/*
+
+#auto-generated constraint log files
+Aufgabe*/constraint/*
+Aufgabe*/!constraint/**.sdc
+Aufgabe*/!constraint/**.pdc
+
+#synthesis log files
+Aufgabe1/synthesis/*
+
+#smartgen log files
+Aufgabe*/smartgen/*/*
+Aufgabe*/smartgen/smartgen.aws
+Aufgabe*/!smartgen/*/*.gen
+Aufgabe*/!smartgen/*/*.vhd
+Aufgabe*/!smartgen/*/*.v
+
+#designer files
+Aufgabe*/designer/*/*

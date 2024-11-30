@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<SynplifyOutput>
-	<result>Success</result>
-	<design>aufgabe1</design>
-	<target_verilog>C:\Users\Sebastian\DigitaleSysteme\FPGA\Aufgabe1\synthesis\aufgabe1.vm</target_verilog>
-</SynplifyOutput>

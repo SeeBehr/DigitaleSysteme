@@ -1,7 +1,6 @@
-KEY LIBERO "2024.2"
-KEY CAPTURE "2024.2.0.13"
+KEY LIBERO "2024.1"
+KEY CAPTURE "2024.1.0.3"
 KEY DEFAULT_IMPORT_LOC ""
-KEY DEFAULT_OPEN_LOC ""
 KEY ProjectID "0"
 KEY HDLTechnology "VHDL"
 KEY VERILOGMODE "SYSTEMVERILOG"
@@ -16,9 +15,7 @@ KEY VendorTechnology_DieVoltage "1.2"
 KEY VendorTechnology_PART_RANGE "COM"
 KEY VendorTechnology_DSW_VCCA_VOLTAGE_RAMP_RATE "10_MS"
 KEY VendorTechnology_IO_DEFT_STD "LVCMOS33"
-KEY VendorTechnology_OPCONR ""
 KEY VendorTechnology_PLL_SUPPLY "PLL_SUPPLY_25"
-KEY VendorTechnology_RAD_EXPOSURE ""
 KEY VendorTechnology_RESERVEMIGRATIONPINS "1"
 KEY VendorTechnology_RESTRICTPROBEPINS "1"
 KEY VendorTechnology_RESTRICTSPIPINS "0"
@@ -32,7 +29,7 @@ KEY VendorTechnology_VCCI_1.8_VOLTR "COM"
 KEY VendorTechnology_VCCI_2.5_VOLTR "COM"
 KEY VendorTechnology_VCCI_3.3_VOLTR "COM"
 KEY VendorTechnology_VOLTR "COM"
-KEY ProjectLocation "C:\Users\leon\repos\DigitaleSysteme\Aufgabe1"
+KEY ProjectLocation "C:\Users\Sebastian\DigitaleSysteme\FPGA\Aufgabe1"
 KEY ProjectDescription ""
 KEY UseRootLocationForLinkedFiles "FALSE"
 KEY RootLocationENVForLinkedFiles ""
@@ -46,17 +43,11 @@ KEY SimulationType "VHDL"
 KEY Vendor "Actel"
 LIST REVISIONS
 VALUE="Impl1",NUM=1
-VALUE="Impl2",NUM=2
-CURREV=2
+CURREV=1
 ENDLIST
 LIST GlobalIncludeFileList
 ENDLIST
 LIST FileManager
-VALUE "<project>\synthesis\aufgabe1_syn.prj,prj"
-STATE="utd"
-TIME="1732813601"
-SIZE="2720"
-ENDFILE
 ENDLIST
 LIST UsedFile
 ENDLIST
@@ -133,7 +124,7 @@ EndProfile
 NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
-LOCATION="C:\Program Files\Microchip\LiberoSoC\SynplifyPro\bin\synplify_pro.exe"
+LOCATION="C:\Users\Sebastian\Microchip\Libero\SynplifyPro\bin\synplify_pro.exe"
 PARAM=""
 BATCH=0
 LICENSE=""
@@ -142,7 +133,7 @@ EndProfile
 NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
-LOCATION="C:\Program Files\Microchip\LiberoSoC\ModelSim\win32acoem\modelsim.exe"
+LOCATION="C:\Users\Sebastian\Microchip\Libero\ModelSimPro\win32acoem\modelsim.exe"
 PARAM=""
 BATCH=0
 LICENSE=""
@@ -151,7 +142,7 @@ EndProfile
 NAME="Identify Debugger"
 FUNCTION="IdentifyDebugger"
 TOOL="Identify Debugger"
-LOCATION="C:\Program Files\Microchip\LiberoSoC\Identify\bin\identify_debugger.exe"
+LOCATION="C:\Users\Sebastian\Microchip\Libero\Identify\bin\identify_debugger.exe"
 PARAM=""
 BATCH=0
 LICENSE=""

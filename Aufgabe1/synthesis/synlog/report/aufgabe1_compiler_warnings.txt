@@ -1,3 +1,0 @@
-@W: CL169 :"C:\Users\Sebastian\DigitaleSysteme\FPGA\src\hex4x7seg.vhd":31:8:31:9|Pruning unused register mod14_ena_4. Make sure that there are no unused intermediate registers.
-@W: CL169 :"C:\Users\Sebastian\DigitaleSysteme\FPGA\src\hex4x7seg.vhd":31:8:31:9|Pruning unused register freq_cnt_3(0 to 13). Make sure that there are no unused intermediate registers.
-

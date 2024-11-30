@@ -34,9 +34,9 @@ KEY VendorTechnology_VCCI_3.3_VOLTR "COM"
 KEY VendorTechnology_VOLTR "COM"
 KEY ProjectLocation "C:\Users\leon\repos\DigitaleSysteme\Aufgabe1"
 KEY ProjectDescription ""
-KEY UseRootLocationForLinkedFiles "FALSE"
-KEY RootLocationENVForLinkedFiles ""
-KEY RootLocationForLinkedFiles ""
+KEY UseRootLocationForLinkedFiles "TRUE"
+KEY RootLocationENVForLinkedFiles "DIGI_SYS_ROOT"
+KEY RootLocationForLinkedFiles "C:\Users\leon\repos\DigitaleSysteme"
 KEY GlobalIncludePaths ""
 KEY Pa4PeripheralNewSeq "GOOD"
 KEY MemoryMapDrcSeverity "FALSE"
@@ -44,6 +44,7 @@ KEY LossOfDataDRCSeverity "TRUE"
 KEY IdWidthMismatchDRCSeverity "TRUE"
 KEY SimulationType "VHDL"
 KEY Vendor "Actel"
+KEY ActiveRoot "aufgabe1::work"
 LIST REVISIONS
 VALUE="Impl1",NUM=1
 VALUE="Impl2",NUM=2
@@ -52,15 +53,65 @@ ENDLIST
 LIST GlobalIncludeFileList
 ENDLIST
 LIST FileManager
+VALUE "<project>\synthesis\aufgabe1.so,so"
+STATE="utd"
+TIME="1732981172"
+SIZE="235"
+ENDFILE
+VALUE "<project>\synthesis\aufgabe1.vm,syn_vm"
+STATE="utd"
+TIME="1732981171"
+SIZE="15623"
+ENDFILE
 VALUE "<project>\synthesis\aufgabe1_syn.prj,prj"
 STATE="utd"
-TIME="1732813601"
-SIZE="2720"
+TIME="1732980523"
+SIZE="2414"
+ENDFILE
+VALUE "<project>\synthesis\aufgabe1_vm.sdc,syn_sdc"
+STATE="utd"
+TIME="1732981171"
+SIZE="967"
+ENDFILE
+VALUE "${DIGI_SYS_ROOT}\src\aufgabe1.vhd,hdl"
+STATE="utd"
+TIME="1732813522"
+SIZE="2060"
+ENDFILE
+VALUE "${DIGI_SYS_ROOT}\src\hex4x7seg.vhd,hdl"
+STATE="utd"
+TIME="1732813522"
+SIZE="3511"
 ENDFILE
 ENDLIST
 LIST UsedFile
 ENDLIST
 LIST NewModulesInfo
+LIST "aufgabe1::work"
+FILE "${DIGI_SYS_ROOT}\src\aufgabe1.vhd,hdl"
+LIST ProjectState5.1
+LIST Impl1
+ideSYNTHESIS(<project>\synthesis\aufgabe1.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+LIST Impl2
+ideSYNTHESIS(<project>\synthesis\aufgabe1.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
 ENDLIST
 LIST AssociatedStimulus
 ENDLIST
@@ -134,8 +185,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Program Files\Microchip\LiberoSoC\SynplifyPro\bin\synplify_pro.exe"
-PARAM=""
-BATCH=0
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -159,6 +210,28 @@ IS32BIT="1"
 EndProfile
 ENDLIST
 LIST ProjectState5.1
+LIST "aufgabe1::work"
+LIST Impl1
+ideSYNTHESIS(<project>\synthesis\aufgabe1.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+LIST Impl2
+ideSYNTHESIS(<project>\synthesis\aufgabe1.vm,syn_vm)=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
 ENDLIST
 LIST ExcludePackageForSimulation
 ENDLIST
@@ -172,10 +245,17 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
+Reports;Reports;0
+ReportsCurrentItem;Place and Route:aufgabe1_glb_net_report.xml
 StartPage;StartPage;0
-ACTIVEVIEW;StartPage
+ACTIVEVIEW;Reports
 ENDLIST
 LIST ModuleSubBlockList
+LIST "aufgabe1::work","${DIGI_SYS_ROOT}\src\aufgabe1.vhd","FALSE","FALSE"
+SUBBLOCK "hex4x7seg::work","${DIGI_SYS_ROOT}\src\hex4x7seg.vhd","FALSE","FALSE"
+ENDLIST
+LIST "hex4x7seg::work","${DIGI_SYS_ROOT}\src\hex4x7seg.vhd","FALSE","FALSE"
+ENDLIST
 ENDLIST
 LIST ActiveTestBenchList
 ENDLIST

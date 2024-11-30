@@ -65,8 +65,8 @@ SIZE="15623"
 ENDFILE
 VALUE "<project>\synthesis\aufgabe1_syn.prj,prj"
 STATE="utd"
-TIME="1732980523"
-SIZE="2414"
+TIME="1732981172"
+SIZE="2696"
 ENDFILE
 VALUE "<project>\synthesis\aufgabe1_vm.sdc,syn_sdc"
 STATE="utd"
@@ -185,8 +185,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Program Files\Microchip\LiberoSoC\SynplifyPro\bin\synplify_pro.exe"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -245,10 +245,8 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-Reports;Reports;0
-ReportsCurrentItem;Place and Route:aufgabe1_glb_net_report.xml
 StartPage;StartPage;0
-ACTIVEVIEW;Reports
+ACTIVEVIEW;StartPage
 ENDLIST
 LIST ModuleSubBlockList
 LIST "aufgabe1::work","${DIGI_SYS_ROOT}\src\aufgabe1.vhd","FALSE","FALSE"

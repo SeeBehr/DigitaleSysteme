@@ -18,7 +18,7 @@ ARCHITECTURE struktur OF hex4x7seg IS
     CONSTANT FREQ_N: natural := 2**14;
     CONSTANT MOD4_N: natural := 4;
 
-    SIGNAL freq_cnt: std_logic_vector(0 TO 13);
+    SIGNAL freq_cnt: std_logic_vector(0 TO 14) := (OTHERS => '0');
     SIGNAL mod4_cnt: std_logic_vector(0 TO 1);
     SIGNAL mux_out: std_logic_vector(0 TO 3);
     SIGNAL mod14_ena: std_logic;
@@ -32,8 +32,9 @@ BEGIN
             freq_cnt <= (OTHERS => '0');
             mod14_ena <= '0';
         ELSIF rising_edge(clk) THEN
-            IF freq_cnt=FREQ_N-1 THEN
+            IF freq_cnt(14)='1' THEN
                 mod14_ena <= '1';
+                freq_cnt(14) <= '0';
             ELSE
                 mod14_ena <= '0';
             END IF;
@@ -48,9 +49,7 @@ BEGIN
         IF rst=RSTDEF THEN
             mod4_cnt <= (OTHERS => '0');
         ELSIF rising_edge(clk) THEN
-            IF mod14_ena = '1' THEN
-                mod4_cnt <= mod4_cnt + 1;
-            END IF;
+            mod4_cnt <= mod4_cnt + mod14_ena;
         END IF;
     END PROCESS;
 
@@ -68,7 +67,7 @@ BEGIN
                     ena <= "0010";
                 WHEN "10" =>
                     ena <= "0100";
-                WHEN "11" => 
+                WHEN OTHERS => 
                     ena <= "1000";
             END CASE;
         END IF;
@@ -80,7 +79,7 @@ BEGIN
         mux_out <= data(3 DOWNTO 0) WHEN "00",
                     data(7 DOWNTO 4) WHEN "01",
                     data(11 DOWNTO 8) WHEN "10",
-                    data(15 DOWNTO 12) WHEN "11";
+                    data(15 DOWNTO 12) WHEN OTHERS;
 
     
     -- 7-aus-4-Dekoder
@@ -100,14 +99,13 @@ BEGIN
             "0111001" WHEN "1100",
             "1011110" WHEN "1101",
             "1111001" WHEN "1110",
-            "1110001" WHEN "1111";
+            "1110001" WHEN OTHERS;
 
     -- 1-aus-4-Multiplexer
     WITH mod4_cnt SELECT
         dp <= dpin(0) WHEN "00",
             dpin(1) WHEN "01",
             dpin(2) WHEN "10",
-            dpin(3) WHEN "11";
+            dpin(3) WHEN OTHERS;
 
 END struktur;
-

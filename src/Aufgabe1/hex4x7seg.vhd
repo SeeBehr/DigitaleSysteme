@@ -15,13 +15,9 @@ ENTITY hex4x7seg IS
 END hex4x7seg;
 
 ARCHITECTURE struktur OF hex4x7seg IS
-    CONSTANT FREQ_N: natural := 2**14;
-    CONSTANT MOD4_N: natural := 4;
-
     SIGNAL freq_cnt: std_logic_vector(0 TO 14) := (OTHERS => '0');
     SIGNAL mod4_cnt: std_logic_vector(0 TO 1);
     SIGNAL mux_out: std_logic_vector(0 TO 3);
-    SIGNAL mod14_ena: std_logic;
 BEGIN
 
 
@@ -30,13 +26,9 @@ BEGIN
     BEGIN
         IF rst=RSTDEF THEN
             freq_cnt <= (OTHERS => '0');
-            mod14_ena <= '0';
         ELSIF rising_edge(clk) THEN
             IF freq_cnt(14)='1' THEN
-                mod14_ena <= '1';
                 freq_cnt(14) <= '0';
-            ELSE
-                mod14_ena <= '0';
             END IF;
             freq_cnt <= freq_cnt + 1;
         END IF;
@@ -49,7 +41,7 @@ BEGIN
         IF rst=RSTDEF THEN
             mod4_cnt <= (OTHERS => '0');
         ELSIF rising_edge(clk) THEN
-            mod4_cnt <= mod4_cnt + mod14_ena;
+            mod4_cnt <= mod4_cnt + freq_cnt(14);
         END IF;
     END PROCESS;
 

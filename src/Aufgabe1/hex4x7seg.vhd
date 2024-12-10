@@ -16,6 +16,7 @@ END hex4x7seg;
 
 ARCHITECTURE struktur OF hex4x7seg IS
     SIGNAL freq_cnt: std_logic_vector(0 TO 14) := (OTHERS => '0');
+    SIGNAL freq_ena: std_logic;
     SIGNAL mod4_cnt: std_logic_vector(0 TO 1);
     SIGNAL mux_out: std_logic_vector(0 TO 3);
 BEGIN
@@ -26,9 +27,13 @@ BEGIN
     BEGIN
         IF rst=RSTDEF THEN
             freq_cnt <= (OTHERS => '0');
+            freq_ena <= '0';
         ELSIF rising_edge(clk) THEN
             IF freq_cnt(14)='1' THEN
                 freq_cnt(14) <= '0';
+                freq_ena <= '1';
+            ELSE
+                freq_ena <= '0';
             END IF;
             freq_cnt <= freq_cnt + 1;
         END IF;
@@ -41,7 +46,7 @@ BEGIN
         IF rst=RSTDEF THEN
             mod4_cnt <= (OTHERS => '0');
         ELSIF rising_edge(clk) THEN
-            mod4_cnt <= mod4_cnt + freq_cnt(14);
+            mod4_cnt <= mod4_cnt + freq_ena;
         END IF;
     END PROCESS;
 
